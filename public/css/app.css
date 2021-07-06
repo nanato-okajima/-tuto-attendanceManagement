@@ -1,13 +1,4 @@
-//Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-//Variables
-// @import "variables";
-
-//Bootstrap
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-body {
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);body {
   background-color: #fff;
 }
 
@@ -20,35 +11,35 @@ main {
   background: #222 no-repeat center center;
   background-size: cover;
   margin-bottom: 30px;
+}
 
-  .header-text {
-    position: relative;
-    padding-bottom: 1ox;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    color: rgba(255, 255, 255, 0.9);
+.global-header .header-text {
+  position: relative;
+  padding-bottom: 1ox;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.9);
+}
 
-    h1 {
-      margin: 0 auto;
-      padding-top: 30px;
-      text-align: center;
-      font-weight: 200;
+.global-header .header-text h1 {
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+  font-weight: 200;
+}
 
-      a {
-        color: rgba(255, 255, 255, 1.0);
-        text-decoration: none;
-      }
-    }
-  }
+.global-header .header-text h1 a {
+  color: white;
+  text-decoration: none;
+}
 
-  .tag-line {
-    margin: 10px auto;
-    padding: 0 10px;
-    max-width: 420px;
-    color: rgba(255, 255, 255, 0.7);
-    text-align: center;
-    font-weight: 300;
-  }
+.global-header .tag-line {
+  margin: 10px auto;
+  padding: 0 10px;
+  max-width: 420px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-weight: 300;
 }
 
 .article-list h2 a {
@@ -70,12 +61,12 @@ main {
   border-radius: 12px;
   color: rgba(0, 0, 0, 0.3);
   text-decoration: none;
-  transition: color,border-color,background-color 0.1s linear;
+  transition: color, border-color, background-color 0.1s linear;
 }
 
 .post-tag a:hover {
-  background-color: rgba(0, 0, 0, 1.0);
-  color: rgba(255, 255, 255, 1.0);
+  background-color: black;
+  color: white;
 }
 
 .not-found h1 {
@@ -128,13 +119,13 @@ main {
   text-decoration: none;
   font-weight: 300;
   font-size: 13px;
-  transition: background-color,border-color,color 0,1s linear;
+  transition: background-color, border-color, color 0, 1s linear;
 }
 
 .author-contact a:hover {
-  border: 1px solid rgba(51, 122, 182, 1.0);
-  background-color: rgba(51, 122, 183, 1.0);
-  color: rgba(255, 255, 255, 1.0);
+  border: 1px solid #337ab6;
+  background-color: #337ab7;
+  color: white;
 }
 
 .pogination {
@@ -142,15 +133,15 @@ main {
   text-align: center;
 }
 
-.order-posts,.newer-posts {
-  display: inline!important;
+.order-posts,
+.newer-posts {
+  display: inline !important;
   border: 1px solid #ddd;
   border-radius: 15px;
   text-decoration: none;
-  transition: border .3s ease;
+  transition: border 0.3s ease;
   padding: 5px 14px;
 }
-
 
 .page-number {
   display: inline-block;
@@ -166,7 +157,8 @@ main {
   float: right;
 }
 
-.order-posts:hover,.newer-posts:hover {
+.order-posts:hover,
+.newer-posts:hover {
   color: #889093;
   background-color: #98a0a4;
 }
@@ -196,3 +188,4 @@ article section img {
   height: auto;
   margin: 13px auto;
 }
+

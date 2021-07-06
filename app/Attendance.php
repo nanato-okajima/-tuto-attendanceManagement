@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Attendance extends Model
 {
@@ -23,5 +24,20 @@ class Attendance extends Model
     public function scopeIgnoreFlagged($query)
     {
         return $query->where('flagged_at', null);
+    }
+
+    /**
+     * 通報処理(flagged_atの更新)
+     *
+     * @return bool
+     */
+    public function flag()
+    {
+        return $this->update(['flagged_at' => now()]);
+    }
+
+    public function getAvatarAttribute()
+    {
+        return sprintf('https://www.gravatar.com/avatar/%s?s=100', md5(strtolower(trim($this->email))));
     }
 }

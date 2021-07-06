@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AttendancesController@index')->name('home');
+Route::get('attend', 'AttendancesController@create')->name('attend');

@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('attendances', 'Api\AttendacesController')->only(['index', 'show', 'store']);
+Route::resource('attendances', 'Api\AttendancesController')->only(['index', 'show', 'store']);
 Route::put('attendances/{attendance}/report', 'Api\ReportAttendancesController@update');
